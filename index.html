@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column bg-white">
+    <main class="flex-grow-1">
+        <div class="container my-5">
+            <div class="container bg-dark border border-secondary rounded">
+                <div class="bg-dark my-2 mx-2 border-bottom border-secondary">
+                    <h1 class="text-white text-end" id="display-calc"></h1>
+                    <h6 class="text-secondary text-end" id="display-result"></h6>
+                </div>
+                <div class="container d-flex flex-row justify-content-center">
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="opening">&#40;</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="closing">&#41;</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="percent-sign">&#37;</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="all-clear">AC</button>
+                </div>
+                <div class="container d-flex flex-row justify-content-center">
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="num-seven">7</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="num-eight">8</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="num-nine">9</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="divide-sign">&#247;</button>
+                </div>
+                <div class="container d-flex flex-row justify-content-center">
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="num-four">4</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="num-five">5</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="num-six">6</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="multiplication">&#215;</button>
+                </div>
+                <div class="container d-flex flex-row justify-content-center">
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="num-one">1</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="num-two">2</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="num-three">3</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="hyphen-sign">&#45;</button>
+                </div>
+                <div class="container d-flex flex-row justify-content-center">
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="num-zero">0</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="period">&#46;</button>
+                    <button type="button" class="btn btn-info p-2 my-2 mx-1" style="width: 4em;" id="equals-sign">&#61;</button>
+                    <button type="button" class="btn btn-secondary p-2 my-2 mx-1" style="width: 4em;" id="plus-sign">&#43;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>    
+    <script src="./js/calculator.js"></script>
+</body>
+</html>

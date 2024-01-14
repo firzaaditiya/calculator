@@ -56,7 +56,7 @@ function addCurrentFormula(typeOperation) {
     if (typeOperation != undefined) {
         listOfOperation.push(typeOperation);
     }
-    
+
     formula.text = "";
     formula.hasDecimal = false;
     formula.hasPercentage = false;
@@ -84,9 +84,7 @@ function updateZero() {
         if (formula.text[0] != ZERO) {
             formula.text += ZERO;
             displayCalc.innerHTML += ZERO;
-        }
-
-        if (formula.text[1] != undefined) {
+        } else if (formula.text[1] != undefined) {
             if (formula.text[1] != ZERO) {
                 formula.text += ZERO;
                 displayCalc.innerHTML += ZERO;

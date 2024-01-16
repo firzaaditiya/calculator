@@ -96,6 +96,38 @@ function updateZero() {
     }
 }
 
+function calculate() {
+    const regexFormula = /^[0-9\(\)\.]+$/;
+
+    listOfFormula.forEach((formula) => {
+        if (!regexFormula.test(formula)) {
+            throw new Error("Formula Pattern Error");
+        }
+    });
+
+    const regexOperator = /[+\-\/*]/;
+
+    listOfOperation.forEach((operator) => {
+        if (!regexOperator.test(operator)) {
+            throw new Error("Operator Pattern Error");
+        }
+    });
+
+    let mergedFormula = "";
+
+    let index = 0;
+    for (const formulaData of listOfFormula) {
+        mergedFormula += formulaData;
+
+        if (listOfOperation[index]) {
+            mergedFormula += listOfOperation[index];
+            index++;
+        }
+    }
+
+    return Function(`"use strict"; return (${mergedFormula})`)();
+}
+
 btnPlusSign.addEventListener("click", function() {
     if (!isNewFormula) {
         addCurrentFormula(PLUS);
@@ -242,21 +274,12 @@ btnEqualsSign.addEventListener("click", function() {
     try {
         addCurrentFormula();
 
-        let mergedFormula = "";
-
-        let index = 0;
-        for (const formulaData of listOfFormula) {
-            mergedFormula += formulaData;
-
-            if (listOfOperation[index]) {
-                mergedFormula += listOfOperation[index];
-                index++;
-            }
-        }
-
-        result = eval(mergedFormula);
+        result = calculate();
 
         displayResult.innerText = result;
+        displayCalc.innerHTML = "&nbsp;";   
+        listOfFormula.splice(0, listOfFormula.length);
+        listOfOperation.splice(0, listOfOperation.length);
     } catch(error) {
         displayResult.innerText = "Error";
     }
